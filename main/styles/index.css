@@ -1,0 +1,52 @@
+:root {
+
+    /* COPIAR E COLAR essas variáveis em todos os css */
+
+    /* pages */
+    --primary-color: #16425E;
+    --secundary-color: #3F8798;
+    --third-color: #b6d9CC;
+
+    --dark-color: #333334;
+    --light-color: #F8FCEB;
+    --green-light-color: #6c9d41;
+    --green-dark-color: #3A6B2F;
+
+    --color-button-light: #fff;
+}
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    border: none;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+}
+
+.header {
+    width: 100%;
+    margin: 10px;
+    height: 170px;
+    background-color: transparent;
+}
+
+.header .nav{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30%;
+}
+
+.header .pages{
+    align-items: center;
+    justify-content: space-between;
+    width: 60%;
+}
