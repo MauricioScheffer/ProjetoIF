@@ -1,4 +1,4 @@
-package devconecta.main.models;
+package main.models;
 
 public class Disciplina {
     
