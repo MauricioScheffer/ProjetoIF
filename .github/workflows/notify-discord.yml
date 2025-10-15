@@ -16,7 +16,7 @@ jobs:
         run: |
           curl -H "Content-Type: application/json" \
           -X POST \
-          -d '{"content":"📢 Novo Pull Request no **Frontend** aberto por **${{ github.actor }}**: [${{ github.event.pull_request.title }}](${{ github.event.pull_request.html_url }})"}' \
+          -d "{"content":"📢 Novo Pull Request no **Frontend** aberto por **${{ github.actor }}**: [${{ github.event.pull_request.title }}](${{ github.event.pull_request.html_url }})"}" \
           ${{ secrets.DISCORD_WEBHOOK }}
 
       - name: Notificar Pull Request mergeado
@@ -24,7 +24,7 @@ jobs:
         run: |
           curl -H "Content-Type: application/json" \
           -X POST \
-          -d '{"content":"✅ Pull Request **mergeado** no **Frontend** por **${{ github.actor }}**: [${{ github.event.pull_request.title }}](${{ github.event.pull_request.html_url }})"}' \
+          -d "{"content":"✅ Pull Request **mergeado** no **Frontend** por **${{ github.actor }}**: [${{ github.event.pull_request.title }}](${{ github.event.pull_request.html_url }})"}" \
           ${{ secrets.DISCORD_WEBHOOK }}
 
       - name: Notificar Push (commit ou merge direto)
