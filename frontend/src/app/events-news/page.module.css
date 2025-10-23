@@ -1,0 +1,154 @@
+html,
+body,
+#__next,
+.app-container {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  background-color: #0b3043; 
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.noticias-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  height: 100%;
+  width: 100%;
+  padding: 40px 80px;
+  background-color: #0b3043;
+  box-sizing: border-box;
+  gap: 50px;
+}
+
+.noticias-left {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 20px;
+}
+
+.titulo {
+  font-size: 2rem;
+  font-weight: 1000;
+}
+
+.imagem-wrapper {
+  width: 100%;
+  max-width: 650px;
+  overflow: hidden;
+  border-radius: 12px;
+}
+
+.imagem-evento {
+  object-fit: cover;
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+}
+
+.descricao {
+  font-size: 1.25rem;
+  line-height: 1.6;
+  opacity: 0.9;
+  max-width: 550px;
+  text-align: justify;
+}
+
+.botao-eventos {
+  background-color: white;
+  color: #0b3043;
+  border: none;
+  border-radius: 10px;
+  padding: 12px 24px;
+  font-weight: 700;
+  cursor: pointer;
+  width: fit-content;
+  transition: all 0.3s ease;
+}
+
+.botao-eventos:hover {
+  background-color: transparent;
+  color: white;
+  outline: 2px solid white;
+}
+
+.noticias-right {
+  flex: 1;
+  height: 100%;
+  overflow-y: auto;
+  padding: 20px;
+  background-color: #0d3c52;
+  border-radius: 12px;
+  scrollbar-width: thin;
+  scrollbar-color: #ffffff #0d3c52;
+}
+
+.noticias-right::-webkit-scrollbar {
+  width: 8px;
+}
+.noticias-right::-webkit-scrollbar-thumb {
+  background-color: #ffffff;
+  border-radius: 4px;
+}
+.noticias-right::-webkit-scrollbar-track {
+  background: #0d3c52;
+}
+
+.lista-eventos {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  padding-right: 10px;
+}
+
+.evento-item {
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 18px 24px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: background 0.3s;
+}
+
+.evento-item:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.evento-item h3 {
+  font-size: 1rem;
+  font-weight: 800;
+  margin: 0;
+}
+
+.evento-item h3 span {
+  font-weight: 600;
+}
+
+.evento-item .data {
+  font-size: 0.9rem;
+  opacity: 0.85;
+}
+
+.evento-item .seta {
+  font-size: 1.2rem;
+  margin-left: 10px;
+}
+
+@media (max-width: 1200px) {
+  .noticias-container {
+    flex-direction: column;
+    align-items: center;
+    overflow-y: auto;
+  }
+
+  .noticias-right {
+    width: 100%;
+    height: 300px;
+  }
+}
