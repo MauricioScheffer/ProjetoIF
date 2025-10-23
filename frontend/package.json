@@ -8,14 +8,6 @@
     "start": "next start",
     "lint": "eslint"
   },
-  "dependencies": {
-    "next": "15.5.4",
-    "owl.carousel": "^2.3.4",
-    "react": "19.1.0",
-    "react-dom": "19.1.0",
-    "react-owl-carousel": "^2.3.3",
-    "sass": "^1.93.2"
-  },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
     "@types/node": "^20",
