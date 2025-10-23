@@ -1,4 +1,3 @@
-"use client";
 //import Image from "next/image";
 import { title } from "process";
 import styles from "./page.module.css";
@@ -6,12 +5,7 @@ import styles from "./page.module.css";
 import dynamic from "next/dynamic";
 import "owl.carousel/dist/assets/owl.carousel.css";
 import "owl.carousel/dist/assets/owl.theme.default.css";
-import "./scss/home.scss"; // seu SCSS customizado
 
-// import dinâmico para evitar erro de SSR
-const OwlCarousel = dynamic(() => import("react-owl-carousel"), {
-  ssr: false,
-});
 
 
 export default function Home() {
@@ -28,17 +22,7 @@ export default function Home() {
   return (
     <div className="main">
       <div className="carousel">
-        <OwlCarousel className="owl-theme">
-          <div className="item">
-            <img src="/images/banner1.jpg" alt="Banner 1" />
-          </div>
-          <div className="item">
-            <img src="/images/banner2.jpg" alt="Banner 2" />
-          </div>
-          <div className="item">
-            <img src="/images/banner3.jpg" alt="Banner 3" />
-          </div>
-        </OwlCarousel>
+        oi hello
       </div>
     </div>
   );
