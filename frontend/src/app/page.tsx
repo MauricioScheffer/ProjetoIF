@@ -22,7 +22,16 @@ export default function Home() {
   return (
     <div className="main">
       <div className="carousel">
-        oi hello
+        <div className="image">
+          {/* <img src="" alt="" /> */}
+          oi
+        </div>
+
+
+      </div>
+
+      <div className="section2">
+        ola
       </div>
     </div>
   );
