@@ -2,9 +2,7 @@
 import { title } from "process";
 import styles from "./page.module.css";
 // importante para rodar o carousel no lado do cliente
-import dynamic from "next/dynamic";
-import "owl.carousel/dist/assets/owl.carousel.css";
-import "owl.carousel/dist/assets/owl.theme.default.css";
+
 
 
 
@@ -24,14 +22,25 @@ export default function Home() {
       <div className="carousel">
         <div className="image">
           {/* <img src="" alt="" /> */}
-          oi
+
         </div>
 
 
       </div>
 
       <div className="section2">
-        ola
+        <div>
+          <h2>Sobre o cursos</h2>
+
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+            A incidunt sint consectetur quibusdam id voluptate officia. 
+            Quos ipsam pariatur placeat tenetur accusamus maxime aliquam dolorem, 
+            nisi laudantium officiis odio nesciunt.</p>
+          
+          <div>
+
+          </div>
+        </div>
       </div>
     </div>
   );
