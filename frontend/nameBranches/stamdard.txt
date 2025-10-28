@@ -1,0 +1,17 @@
+Tipo         | Quando usar                                         | Exemplo
+------------------------------------------------------------------------------------
+feature/     | Para adicionar uma nova funcionalidade            | feature/login-page
+fix/         | Para corrigir um bug                              | fix/cadastro-null-error
+hotfix/      | Correção urgente na main                          | hotfix/deploy-error
+refactor/    | Melhorar código sem mudar funcionalidade          | refactor/organizar-rotas
+docs/        | Alterações apenas na documentação                 | docs/atualizar-readme
+test/        | Adicionar ou corrigir testes                      | test/api-endpoints
+style/       | Ajustes visuais ou de formatação                  | style/botao-primario-css
+chore/       | Mudanças de manutenção (dependências, configs)    | chore/atualizar-node
+init/        | Para início de desenvolvimento de algo novo       | init/projeto-base, init/configurar-backend
+perf/        | Melhorias de desempenho                           | perf/otimizar-busca
+build/       | Ajustes de build                                  | build/configurar-webpack
+ci/          | Automatizações no GitHub Actions                  | ci/adicionar-lint-workflow
+revert/      | Para reverter algo específico                     | revert/erro-na-feature-x
+wip/         | Para código ainda em andamento (Work in Progress) | wip/tela-de-perfil, wip/api-integração-pix
+finish/      | Para tarefas sendo finalizadas ou concluídas      | finish/login-flow, finish/validacao-formulario

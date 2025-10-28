@@ -1,4 +1,4 @@
-.page {
+/* .page {
   --gray-rgb: 0, 0, 0;
   --gray-alpha-200: rgba(var(--gray-rgb), 0.08);
   --gray-alpha-100: rgba(var(--gray-rgb), 0.05);
@@ -14,27 +14,143 @@
   padding: 80px;
   gap: 64px;
   font-family: var(--font-geist-sans);
-}
+} */
+
+/* [data-theme="dark"]{
+  color: #080808;
+} */
 
 @media (prefers-color-scheme: dark) {
   .page {
     --gray-rgb: 255, 255, 255;
     --gray-alpha-200: rgba(var(--gray-rgb), 0.145);
     --gray-alpha-100: rgba(var(--gray-rgb), 0.06);
-
-    --button-primary-hover: #ccc;
-    --button-secondary-hover: #1a1a1a;
+/* 
+    --button-primary-hover: var(--light);
+    --button-secondary-hover: var(--dark); */
   }
+}
+
+.button{
+  padding: 13px;
+  color: #fff;
+  background-color: var(--blue);
+  border-radius: 20px;
+  font-weight: bold;
+  font-size: 15px;
+  border: none;
+  transition: 1s;
+}
+
+.button:hover{
+  background-color: var(--light);
+  color: #080808;
 }
 
 .main {
   display: flex;
   flex-direction: column;
-  gap: 32px;
-  grid-row-start: 2;
+  align-items: center;
+  text-align: center;
+  color: #fff;
+  margin-top: 70px;
+  background-color: var(--dark);
 }
 
-.main ol {
+.hero {
+  background: linear-gradient(270deg, var(--dark-blue), var(--blue), var(--blue));
+  background-size: 600% 600%;
+  animation: gradient 15s ease infinite;
+
+  /* animacao dos guri */
+  /* background-image: url("/images/image.jpg");
+  background-size: 200% 200%;
+  background-repeat: no-repeat;
+  background-position: 0% 50%;
+  animation: bgMove 20s linear infinite; */
+  color: var(--light);
+  width: 100%;
+  padding: 100px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* dos guris */
+/* @keyframes bgMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+} */
+
+.heroContent{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  width: 100%;
+  gap: 40px;
+}
+
+.heroLeft{
+  flex: 1;
+  min-width: 300px
+}
+
+.heroLeft h1 {
+  font-size: 2.8rem;
+  margin-bottom: 20px;
+}
+
+.heroLeft p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 30px;
+  font-weight: 200;
+}
+
+.heroButton {
+  background-color: var(--dark-blue);
+  color: var(--light);
+  border: none;
+  padding: 14px 32px;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+  font-size: 18px;
+  margin-top: 6px;
+}
+
+.heroButton:hover {
+  background-color: var(--light);
+  color: var(--dark-blue);
+}
+
+.heroRight{
+  width: 50%;
+  display: block;
+}
+
+.heroImage{
+  border-radius: 10px;
+}
+
+
+/* DESCATAVEL?? talvez */
+/* .main ol {
   font-family: var(--font-geist-mono);
   padding-left: 0;
   margin: 0;
@@ -50,7 +166,7 @@
 
 .main code {
   font-family: inherit;
-  /* background: var(--gray-alpha-100); */
+  /* background: var(--gray-alpha-100); 
   padding: 2px 4px;
   border-radius: 4px;
   font-weight: 600;
@@ -105,63 +221,29 @@ a.secondary {
 
 .footer img {
   flex-shrink: 0;
-}
+} */
 
-/* Enable hover only on non-touch devices */
-@media (hover: hover) and (pointer: fine) {
-  a.primary:hover {
-    background: var(--button-primary-hover);
-    border-color: transparent;
-  }
-
-  a.secondary:hover {
-    background: var(--button-secondary-hover);
-    border-color: transparent;
-  }
-
-  .footer a:hover {
-    text-decoration: underline;
-    text-underline-offset: 4px;
-  }
-}
-
-@media (max-width: 600px) {
-  .page {
-    padding: 32px;
-    padding-bottom: 80px;
-  }
-
-  .main {
-    align-items: center;
-  }
-
-  .main ol {
+/* Responsividade */
+@media (max-width: 900px) {
+  .heroContent {
+    flex-direction: column-reverse;
     text-align: center;
   }
 
-  .ctas {
-    flex-direction: column;
+  .heroLeft h1 {
+    font-size: 2.2rem;
   }
 
-  .ctas a {
-    font-size: 14px;
-    height: 40px;
-    padding: 0 16px;
+  .heroLeft p {
+    font-size: 1rem;
+    margin: 0 auto 25px;
   }
 
-  a.secondary {
-    min-width: auto;
+  .heroButton {
+    padding: 12px 28px;
   }
 
-  .footer {
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-  }
-}
-
-@media (prefers-color-scheme: dark) {
-  .logo {
-    filter: invert();
+  .button {
+    padding: 10px 24px;
   }
 }
