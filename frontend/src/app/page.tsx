@@ -1,6 +1,7 @@
 //import Image from "next/image";
 import { title } from "process";
 import styles from "./page.module.css";
+import Image from "next/image";
 // importante para rodar o carousel no lado do cliente
 
 
@@ -18,17 +19,35 @@ export default function Home() {
   // };
 
   return (
-    <div className="main">
-      <div className="carousel">
-        <div className="image">
-          {/* <img src="" alt="" /> */}
+    <main className={styles.main}>
 
+      {/* iniicio */}
+      <section className={styles.hero}>
+        <div className={styles.heroContent}>
+          <div className={styles.heroLeft}>
+                <h1>Bem vindo ao Nosso Site</h1>
+                <p>
+                  Conheça mais sobre Tecnologias e Educação aqui. 
+                  <br />
+                  Se inscreva em Eventos e Participe da Nossa Comunidade de Estudantes de T.I!
+                </p>
+                <button className={styles.heroButton}>Saiba mais</button>
+          </div>
+          <div className={styles.heroRight}>
+              <Image
+              src="/images/image.jpg"
+              alt="Imagem Institucional"
+              width={570}
+              height={400}
+              className={styles.heroImage}
+              priority/>
+              <button className={styles.heroButton}>Nossos cursos</button>
+          </div>
         </div>
+      </section>
 
-
-      </div>
-
-      <div className="section2">
+    {/* sobre  o curso*/}
+      <div className="about">
         <div>
           <h2>Sobre o cursos</h2>
 
@@ -36,12 +55,14 @@ export default function Home() {
             A incidunt sint consectetur quibusdam id voluptate officia. 
             Quos ipsam pariatur placeat tenetur accusamus maxime aliquam dolorem, 
             nisi laudantium officiis odio nesciunt.</p>
-          
-          <div>
-
-          </div>
         </div>
       </div>
-    </div>
+
+    {/* news e eventos */}
+    {/* professores */}
+    {/* sobre o portal */}
+    
+
+    </main>
   );
 }
