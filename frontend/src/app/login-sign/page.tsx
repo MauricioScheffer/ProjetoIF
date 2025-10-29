@@ -1,69 +1,81 @@
-import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
-import "./page.module.css";
+"use client";
+
 import { useState } from "react";
+import styles from "./page.module.css";
+
 
 export default function LoginRegister() {
-
-    const [isActive, setIsActive] = useState(false);
+  const [isActive, setIsActive] = useState(false);
 
   return (
-    <div className="container">
-      <div className="form-box login">
-        <form action="#">
-          <h1>Login</h1>
-          <div className="input-box">
-            <input type="text" placeholder="Email" required />
-            <i className="bi bi-envelope-fill"></i>
-          </div>
-          <div className="input-box">
-            <input type="password" placeholder="Senha" required />
-            <i className="bi bi-lock-fill"></i>
-          </div>
-          <div className="forgot-link">
-            <a href="#">Esqueceu a senha?</a>
-          </div>
-          <button className="btn btn-primary" type="submit">
-            Entrar
-          </button>
-        </form>
-      </div>
+    <div className={styles.loginPage}>
 
-           <div className="form-box register">
-        <form action="#">
-          <h1>Crie sua conta</h1>
-          <div className="input-box">
-            <input type="text" placeholder="Username" required />
-            <i className="bi bi-person-fill"></i>
-          </div>
-          <div className="input-box">
-            <input type="email" placeholder="Email" required />
-            <i className="bi bi-envelope-fill"></i>
-          </div>
-          <div className="input-box">
-            <input type="password" placeholder="Password" required />
-            <i className="bi bi-lock-fill"></i>
-          </div>
-          <button className="btn btn-primary" type="submit">
-            Concluir
-          </button>
-        </form>
-      </div>
+      <div className={`${styles.container} ${isActive ? styles.active : ""}`}>
+        {/* LOGIN */}
+        <div className={`${styles.formBox} ${styles.login}`}>
+          <form onSubmit={(e) => e.preventDefault()}>
+            <h1>Login</h1>
 
-      <div className="toggle-box">
-        <div className="toggle-panel toggle-left">
-          <h1>Boas vindas!</h1>
-          <p>Você é novo aqui?</p>
-          <button type="button" id="register-btn" className="btn btn-outline-light register-btn" onClick={() => setIsActive(true)}>
-            Cadastre-se
-          </button>
+            <div className={styles.inputBox}>
+              <input type="text" placeholder="Nome" required />
+              {/* <FaUser className={styles.icon} />*/}
+            </div>
+
+            <div className={styles.inputBox}>
+              <input type="password" placeholder="Senha" required />
+              {/*<FaLock className={styles.icon} />*/}
+            </div>
+
+            <div className={styles.forgotLink}>
+              <a href="#">Esqueceu a sua senha?</a>
+            </div>
+
+            <button type="submit" className={styles.btn}>Entrar</button>
+
+          </form>
         </div>
-        <div className="toggle-panel toggle-right">
-          <h1>Boas vindas!</h1>
-          <p>Já faz parte do DevConecta?</p>
-          <button type="button" id="login-btn" className="btn btn-outline-light login-btn" onClick={() => setIsActive(false)}>
-            Login
-          </button>
+
+        {/* REGISTER */}
+        <div className={`${styles.formBox} ${styles.register}`}>
+          <form onSubmit={(e) => e.preventDefault()}>
+            <h1>Cadastre-se</h1>
+
+            <div className={styles.inputBox}>
+              <input type="text" placeholder="Nome" required />
+              {/*<FaUser className={styles.icon} />*/}
+            </div>
+
+            <div className={styles.inputBox}>
+              <input type="email" placeholder="Email" required />
+              {/*<FaEnvelope className={styles.icon} />*/}
+            </div>
+
+            <div className={styles.inputBox}>
+              <input type="password" placeholder="Senha" required />
+              {/* <FaLock className={styles.icon} />*/}
+            </div>
+
+            <button type="submit" className={styles.btn}>Concluir</button>
+          </form>
+        </div>
+
+        {/* TOGGLE AREA */}
+        <div className={styles.toggleBox}>
+          <div className={`${styles.togglePanel} ${styles.toggleLeft}`}>
+            <h1>Boas vindas!</h1>
+            <p>Ainda não tem uma conta?</p>
+            <button className={styles.btnOutiline} onClick={() => setIsActive(true)}>
+              Cadastrar-se
+            </button>
+          </div>
+
+          <div className={`${styles.togglePanel} ${styles.toggleRight}`}>
+            <h1>Boas vindas!</h1>
+            <p>Já tem conta?</p>
+            <button className={styles.btnOutiline} onClick={() => setIsActive(false)}>
+              Entrar
+            </button>
+          </div>
         </div>
       </div>
     </div>
