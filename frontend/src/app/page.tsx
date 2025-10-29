@@ -47,16 +47,59 @@ export default function Home() {
       </section>
 
     {/* sobre  o curso*/}
-      <div className="about">
-        <div>
-          <h2>Sobre o cursos</h2>
+    <section className={styles.sobre}>
+      <h2>Sobre os cursos</h2>
+      <p className={styles.descricao}>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
+        incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis 
+        nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+      </p>
 
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-            A incidunt sint consectetur quibusdam id voluptate officia. 
-            Quos ipsam pariatur placeat tenetur accusamus maxime aliquam dolorem, 
-            nisi laudantium officiis odio nesciunt.</p>
+      <div className={styles.cursosContainer}>
+        {/* CARD 1 - TDS */}
+        <div className={styles.card}>
+          <div className={styles.tag}>TDS</div>
+          <Image
+            src="/images/tds.jpg"
+            alt="Curso Técnico em Desenvolvimento de Sistemas"
+            width={400}
+            height={250}
+            className={styles.cardImage}
+          />
+          <div className={styles.cardContent}>
+            <h3>Técnico em Desenvolvimento de Sistemas</h3>
+            <p>Integrado ao Ensino Médio. Lorem ipsum dolor sit amet.</p>
+            <a href="#" className={styles.verMais}>VEJA MAIS</a>
+          </div>
+        </div>
+
+        {/* CARD 2 - TADS */}
+        <div className={styles.card}>
+          <div className={styles.tag}>TADS</div>
+          <Image
+            src="/images/tads.jpg"
+            alt="Curso de Análise e Desenvolvimento de Sistemas"
+            width={400}
+            height={250}
+            className={styles.cardImage}
+          />
+          <div className={styles.cardContent}>
+            <h3>Tecnólogo em Análise e Desenvolvimento de Sistemas</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <a href="#" className={styles.verMais}>VEJA MAIS</a>
+          </div>
         </div>
       </div>
+
+      <div className={styles.buttons}>
+        <button className={styles.btn}>Veja também os projetos do TDS</button>
+        <button className={styles.btn}>Veja também os projetos do TADS</button>
+      </div>
+
+      <p className={styles.linkInstituicao}>
+        Acesse o site do IFSUL para saber mais sobre a instituição &gt;
+      </p>
+    </section>
 
     {/* news e eventos */}
     {/* professores */}

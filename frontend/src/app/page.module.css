@@ -68,6 +68,7 @@
   background-repeat: no-repeat;
   background-position: 0% 50%;
   animation: bgMove 20s linear infinite; */
+
   color: var(--light);
   width: 100%;
   padding: 100px 20px;
@@ -147,6 +148,114 @@
 .heroImage{
   border-radius: 10px;
 }
+
+.sobre {
+  text-align: center;
+  background-color: var(--dark-blue);
+  color: white;
+  padding: 80px 20px;
+  width: 100%;
+}
+
+.sobre h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.descricao {
+  max-width: 800px;
+  margin: 0 auto 50px;
+  line-height: 1.6;
+}
+
+.cursosContainer {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+.card {
+  position: relative;
+  background-color: var(--dark-blue);
+  border-radius: 12px;
+  overflow: hidden;
+  width: 370px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.tag {
+  position: absolute;
+  top: 12px;
+  left: 20px;
+  background: var(--light-blue);
+  color: var(--dark-blue);
+  font-weight: bold;
+  padding: 6px 14px;
+  border-radius: 30px;
+  font-size: 0.9rem;
+}
+
+.cardImage {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.cardContent {
+  padding: 20px;
+  text-align: left;
+}
+
+.cardContent h3 {
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+}
+
+.verMais {
+  display: inline-block;
+  margin-top: 10px;
+  color: var(--light-blue);
+  font-weight: bold;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.verMais:hover {
+  text-decoration: underline;
+}
+
+.buttons {
+  margin-top: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.btn {
+  border: 2px solid var(--light-blue);
+  background: transparent;
+  color: var(--light-blue);
+  padding: 12px 28px;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: var(--light-blue);
+  color: var(--dark-blue);
+}
+
+.linkInstituicao {
+  margin-top: 50px;
+  font-size: 0.9rem;
+  color: var(--light-blue);
+}
+
+
 
 
 /* DESCATAVEL?? talvez */
