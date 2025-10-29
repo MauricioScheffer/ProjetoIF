@@ -15,3 +15,18 @@ ci/          | Automatizações no GitHub Actions                  | ci/adiciona
 revert/      | Para reverter algo específico                     | revert/erro-na-feature-x
 wip/         | Para código ainda em andamento (Work in Progress) | wip/tela-de-perfil, wip/api-integração-pix
 finish/      | Para tarefas sendo finalizadas ou concluídas      | finish/login-flow, finish/validacao-formulario
+
+feat: adicionar tela de login
+fix: corrigir erro ao carregar perfil
+refactor: simplificar função de busca de usuários
+docs: atualizar README com instruções de instalação
+
+1. Clique em Commit to (nome da branch) > Publish Branch
+2. Preview Pull Request > Create Pull Request
+3. No site, se estiver “Able to merge”, continue:
+   Create Pull Request > Merge Pull Request > Confirm Merge
+4. Volte ao GitHub Desktop:
+   - Clique em Current Branch e mude para “main”
+   - Clique em “Fetch origin” > “Pull origin”
+
+
