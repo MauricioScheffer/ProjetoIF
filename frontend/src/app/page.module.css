@@ -184,6 +184,13 @@
   box-shadow: 0 5px 15px rgba(0,0,0,0.2);
 }
 
+.card:hover{
+  margin: 0;
+  transition: 2s;
+  /* box-shadow: 5px 5px 0px 10px var(--light); */
+  box-shadow: var(--dark-blue) 5px 5px, var(--dark) 10px 10px, var(--blue) 15px 15px, var(--light-blue) 20px 20px ,var(--light) 25px 25px;
+}
+
 .tag {
   position: absolute;
   top: 12px;
@@ -196,7 +203,7 @@
   font-size: 0.9rem;
 }
 
-.cardImage {
+.card .cardImage {
   width: 100%;
   height: auto;
   display: block;
@@ -205,7 +212,12 @@
 .cardContent {
   padding: 20px;
   text-align: left;
+  border: 2px solid black;
 }
+
+/* .cardContent:hover{
+
+} */
 
 .cardContent h3 {
   font-size: 1.1rem;
@@ -254,6 +266,53 @@
   font-size: 0.9rem;
   color: var(--light-blue);
 }
+
+.news{
+  padding: 100px 20px;
+  width: 100%;
+  justify-content: center; 
+  /* display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  /* min-height: calc(100vh - 100px);
+  width: 100%;
+  padding: 160px 80px 60px; 
+  background-color: #0b3043;
+  box-sizing: border-box;
+  gap: 50px;
+  overflow-y: auto; */
+}
+
+.news .newsContent{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  width: 100%;
+  gap: 40px;
+}
+
+.news h1{
+
+  text-align: left;
+}
+
+.news .cardLeft{
+  flex: 1;
+}
+
+.news .cardRight{
+  max-height: 200px;
+  overflow-y: auto;
+  border: 1px solid #ccc;
+  padding: 10px;
+}
+
+.news .cardRight ul{
+  margin: 0;padding: 0;
+}
+
+
 
 
 
