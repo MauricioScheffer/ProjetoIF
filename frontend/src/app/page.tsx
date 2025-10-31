@@ -1,3 +1,5 @@
+"use client";
+
 //import Image from "next/image";
 import { title } from "process";
 import styles from "./page.module.css";
@@ -60,7 +62,7 @@ export default function Home() {
           <div className={styles.card}>
             <div className={styles.tag}>TDS</div>
             <Image
-              src="/images/tds.jpg"
+              src="/images/image.jpg"
               alt="Curso Técnico em Desenvolvimento de Sistemas"
               width={400}
               height={250}
@@ -77,7 +79,7 @@ export default function Home() {
           <div className={styles.card}>
             <div className={styles.tag}>TADS</div>
             <Image
-              src="/images/tads.jpg"
+              src="/images/image.jpg"
               alt="Curso de Análise e Desenvolvimento de Sistemas"
               width={400}
               height={250}
@@ -107,33 +109,55 @@ export default function Home() {
 
         <div className={styles.newsContent}>
           <div className={styles.cardLeft}>
-          <Image
-            src="/images/image.jpg"
-            alt="Notícias e Eventos"
-            width={375}
-            height={250}
-            className={styles.cardImage}
-          />
+            <Image
+              src="/images/image.jpg"
+              alt="Notícias e Eventos"
+              width={400}
+              height={300}
+              className={styles.cardImage}
+            />
 
-          <p className={styles.descricao}>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            Deserunt dolorum sequi, dolorem possimus amet voluptatibus
-            at asperiores tempore debitis illo aspernatur blanditiis tenetur
-            labore in, cupiditate, nulla temporibus ab. Quas.</p>
-        </div>
+            <p className={styles.descricao}>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Deserunt dolorum sequi, dolorem possimus amet voluptatibus
+              at asperiores tempore debitis illo aspernatur blanditiis tenetur
+              labore in, cupiditate, nulla temporibus ab. Quas.</p>
+          </div>
 
-        <div className={styles.cardRight}>
+          {/* <div className={styles.cardRight}>
           <div className="list">
-            <ul className={styles.listNews}>
-              <li><h2>Nome do Evento: Subtítulo</h2>
-              <p>15 de setembro, 2025</p>
-              <span className={styles.seta}>→</span>
+            {Array.from({ length: 10}).map((_, i) => (
+            <ul key={i} className={styles.listNews}>
+              <li>
+                <h2 className={styles.tituloEvento}>Nome do Evento: Subtítulo</h2>
+                <span className={styles.dataEvento}>15 de setembro, 2025</span>
+                <span className={styles.seta}>→</span>
               </li>
             </ul>
+              
+            ))}
           </div>
+        <button className={styles.botaoEventos}>Veja todos os eventos</button>
+        </div> */}
+
+          <div className={styles.cardRight}>
+            <div className={styles.list}>
+              {Array.from({ length: 10 }).map((_, i) => (
+                <div key={i} className={styles.listNews}>
+                  <div>
+                    <h2>Evento {i + 1}: Subtítulo interessante</h2>
+                    <span className={styles.dataEvento}>15 de setembro, 2025</span>
+                  </div>
+                  <span className={styles.seta}>→</span>
+                </div>
+              ))}
+            </div>
+
             <button className={styles.botaoEventos}>Veja todos os eventos</button>
-        </div>
-        
+          </div>
+
+
+
         </div>
       </section>
       {/* professores */}
